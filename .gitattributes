@@ -1,0 +1,9 @@
+# Encrypt everything by default
+* filter=git-crypt diff=git-crypt
+**/* filter=git-crypt diff=git-crypt
+
+# Never encrypt these control/metadata files
+.gitattributes !filter !diff
+.gitignore !filter !diff
+.gitmodules !filter !diff
+.git-crypt/** !filter !diff
